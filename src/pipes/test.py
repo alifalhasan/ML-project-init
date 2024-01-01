@@ -1,5 +1,3 @@
-# numpy_example.py
-
 import numpy as np
 
 def add_arrays(arr1, arr2):

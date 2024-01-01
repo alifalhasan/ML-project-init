@@ -6,12 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-
 import os
 import sys
 
 sys.path.insert(0, os.path.abspath("../src"))
-
 
 project = 'Deep Learning Init'
 copyright = '2024, Alif Al Hasan'

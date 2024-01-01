@@ -5,10 +5,9 @@ jobs:
     runs-on: [ubuntu-latest]
     container: docker://dvcorg/cml-py3/latest
     steps:
-      - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v2
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies and run tests
         run: |
           pip install -r requirements.txt
           python src/pipes/test.py
@@ -18,10 +17,9 @@ jobs:
     runs-on: [ubuntu-latest]
     container: docker://dvcorg/cml-py3/latest
     steps:
-      - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v2
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies and build documentation
         run: |
           pip install sphinx
           pip install sphinx-rtd-theme

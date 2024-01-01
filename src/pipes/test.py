@@ -1,0 +1,1 @@
+print('This is a ML Project boiler plate code with CICD')

@@ -12,3 +12,24 @@ jobs:
         run: |
           pip install -r requirements.txt
           python src/pipes/test.py
+
+  publish:
+    needs: train
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3/latest
+    steps:
+      - name: "Checkout"
+      - uses: actions/checkout@v2
+        env:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pip install sphinx
+          pip install sphinx-rtd-theme
+          pip install ghp-import
+
+          cd src
+          sphinx-apidoc -o ../docs .
+          cd ..
+          make -C docs clean
+          make -C docs html
+          ghp-import -n -p -f docs/_build/html

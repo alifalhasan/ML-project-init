@@ -1,4 +1,4 @@
-PROJECT = "Deep Learning Init"
+PROJECT = "ML Project Init"
 AUTHOR = "Alif Al Hasan"
 RELEASE = "0.0.1"
 

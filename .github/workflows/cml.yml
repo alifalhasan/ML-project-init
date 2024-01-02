@@ -25,7 +25,7 @@ jobs:
           pip install sphinx-rtd-theme
           pip install ghp-import
 
-          sphinx-apidoc -o ../docs src/
+          sphinx-apidoc -o docs src/
           make -C docs clean
           make -C docs html
           ghp-import -n -p -f docs/_build/html

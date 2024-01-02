@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies and run tests
         run: |
-          pip install -r requirements.txt
+          pip install -r ${{ github.workspace }}/requirements.txt
           python src/pipes/test.py
 
   publish:

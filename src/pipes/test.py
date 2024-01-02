@@ -1,21 +1,21 @@
-import numpy as np
-
-def add_arrays(arr1, arr2):
+def add(x, y):
     """
-    Perform element-wise addition of two NumPy arrays.
+    Performs addition.
 
     Parameters:
-    - arr1 (numpy.ndarray): The first input array.
-    - arr2 (numpy.ndarray): The second input array.
+    - x: The first input number.
+    - y: The second input number.
 
     Returns:
-    numpy.ndarray: The resulting array after element-wise addition.
+    int: The resulting answer after addition.
 
     Example:
-    >>> import numpy as np
-    >>> arr1 = np.array([1, 2, 3])
-    >>> arr2 = np.array([4, 5, 6])
-    >>> add_arrays(arr1, arr2)
-    array([5, 7, 9])
+    >>> x = 2
+    >>> y = 3
+    >>> add(x, y)
+    5
     """
-    return np.add(arr1, arr2)
+    return (x + y)
+
+if __name__ == "__main__" :
+    print(add(2, 3))

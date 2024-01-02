@@ -9,9 +9,9 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../src"))
+sys.path.insert(0, os.path.abspath("../src/"))
 
-project = 'Deep Learning Init'
+project = 'Machine Learning Project Init'
 copyright = '2024, Alif Al Hasan'
 author = 'Alif Al Hasan'
 release = '0.0.1'

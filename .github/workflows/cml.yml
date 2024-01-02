@@ -26,7 +26,7 @@ jobs:
           pip install ghp-import
 
           cd src
-          sphinx-apidoc -o ../docs .
+          sphinx-apidoc -o ../docs src/
           cd ..
           make -C docs clean
           make -C docs html
